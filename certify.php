@@ -1,5 +1,5 @@
 <?php
-   // require_once "phpqrcode/qrlib.php";    
+    require_once "phpqrcode/qrlib.php";    
 
 	$number = "4004";
 	$code = "GAME1";
@@ -10,6 +10,7 @@
 	$qlessons = "11";
 	$study = "разработки простых игровых программ\nна языке программирования C#";
 	$url = "http://videosharp.info/4004/certify-".$code;
+	$date = "22 сентября 2015 года";
 	
 	$image = imagecreatefrompng ( "blank.png" );
 	
@@ -38,10 +39,11 @@
 	$text = $text.$study;
 	
  	text_center($image, $text, 'bookos.ttf', $color_black, 0,850,1024,20);	
+    text_center($image, $date, 'bookosi.ttf', $color_black, 0,1325,480,18);	
    
- /*   QRcode::png($url, "test.png");
+    QRcode::png($url, "test.png");
 	$qr = imagecreatefrompng ( "test.png" );
-	imagecopyresized ( $image , $qr , 795 , 1025 , 10 , 10 , 160 , 160 , 90 , 90 );*/
+	imagecopyresized ( $image , $qr , 795 , 1025 , 10 , 10 , 160 , 160 , 90 , 90 );
 	
 	imagepng($image,'image.png');
 
