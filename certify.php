@@ -17,15 +17,15 @@
 	$color_black = imagecolorallocate($image,0,0,0);
 	$color_brown = imagecolorallocate($image,103,84,51);
 
-	text_center($image, "№ ".$code." - ".$number, 'bookosb.ttf', $color_brown, 0,550,1024,30);
-	text_center($image, "подтверждает, что", 'bookos.ttf', $color_black, 0,600,1024,20);	
-	text_center($image, $name, 'bookosbi.ttf', $color_black, 0,665,1024,26);
+	text_center($image, "№ ".$code." - ".$number, 'BOOKOSB.TTF', $color_brown, 0,550,1024,30);
+	text_center($image, "подтверждает, что", 'BOOKOS.TTF', $color_black, 0,600,1024,20);	
+	text_center($image, $name, 'BOOKOSBI.TTF', $color_black, 0,665,1024,26);
 	if($gender === "M")
 		$text = "выполнил все задания видеокурса";
 	else
 		$text = "выполнила все задания видеокурса";
-	text_center($image, $text, 'bookos.ttf', $color_black, 0,720,1024,20);	
-	text_center($image, "&#171;".$course."&#187;", 'bookosb.ttf', $color_black, 0,790,1024,30);
+	text_center($image, $text, 'BOOKOS.TTF', $color_black, 0,720,1024,20);	
+	text_center($image, "&#171;".$course."&#187;", 'BOOKOSB.TTF', $color_black, 0,790,1024,30);
 	if($qtime =="0") $qtime = "";
 	if(($qlessons/10)%10 !=1) {
 		if($qlessons % 10 == 1) $qlessons = $qlessons." урок"; 
@@ -38,8 +38,8 @@
 	else $text = $text."и овладела практическими навыками\n";
 	$text = $text.$study;
 	
- 	text_center($image, $text, 'bookos.ttf', $color_black, 0,850,1024,20);	
-    text_center($image, $date, 'bookosi.ttf', $color_black, 0,1325,480,18);	
+ 	text_center($image, $text, 'BOOKOS.TTF', $color_black, 0,850,1024,20);	
+    text_center($image, $date, 'BOOKOSI.TTF', $color_black, 0,1325,480,18);	
    
     QRcode::png($url, "test.png");
 	$qr = imagecreatefrompng ( "test.png" );
